@@ -37,12 +37,12 @@ targets:
       - path: Resources/PrivacyInfo.xcprivacy
     dependencies:
       - target: BordaCore
-    info:
-      path: Resources/Info.plist
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arthurfava.Borda
         PRODUCT_NAME: Borda
+        INFOPLIST_FILE: Resources/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
         CODE_SIGN_STYLE: Automatic
         ENABLE_HARDENED_RUNTIME: YES
       configs:
