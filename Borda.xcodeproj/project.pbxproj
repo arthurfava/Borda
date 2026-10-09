@@ -315,6 +315,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.Borda;
 				PRODUCT_NAME = Borda;
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DIRECT;
 			};
@@ -417,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.Borda;
 				PRODUCT_NAME = Borda;
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APP_STORE;
 			};
@@ -519,6 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.Borda;
 				PRODUCT_NAME = Borda;
+				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DIRECT";
 			};
