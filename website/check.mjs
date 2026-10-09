@@ -5,7 +5,7 @@ const required = ["index.html", "pt-br/index.html", "es/index.html", "zh-hans/in
 const missing = required.filter(path => !existsSync(join("dist", path)));
 if (missing.length) throw new Error(`Missing generated pages: ${missing.join(", ")}`);
 const home = readFileSync(join("dist", "index.html"), "utf8");
-for (const marker of ["hreflang", "SoftwareApplication", "/download/", "/cafe/", "class=\"installation\"", "class=\"install-steps\""]) {
+for (const marker of ["hreflang", "SoftwareApplication", "/download/", "/cafe/", "class=\"installation\"", "class=\"install-steps\"", "data-motion-demo", "data-motion-replay"]) {
   if (!home.includes(marker)) throw new Error(`Missing marker: ${marker}`);
 }
 if (home.includes("Mac App Store")) throw new Error("The direct-download landing still mentions the Mac App Store.");

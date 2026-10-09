@@ -19,6 +19,7 @@ const githubURL = publicHTTPSURL("BORDA_GITHUB_URL");
 rmSync(output, { recursive: true, force: true });
 mkdirSync(join(output, "assets"), { recursive: true });
 cpSync(join(here, "assets", "site.css"), join(output, "assets", "site.css"));
+cpSync(join(here, "assets", "motion.css"), join(output, "assets", "motion.css"));
 cpSync(join(here, "assets", "site.js"), join(output, "assets", "site.js"));
 cpSync(join(here, "assets", "borda.png"), join(output, "assets", "borda.png"));
 
@@ -110,6 +111,20 @@ const directDescriptions = {
   ru: "Независимый DMG для macOS. Аккаунт и подписка не требуются."
 };
 
+const motionLabels = {
+  en: ["Drag to the edge", "Keep it for later", "Take it anywhere"],
+  "pt-br": ["Arraste para a lateral", "Deixe para depois", "Leve para qualquer lugar"],
+  es: ["Arrastra al borde", "Guárdalo para después", "Llévalo a cualquier lugar"],
+  "zh-hans": ["拖到屏幕边缘", "暂时存放", "随处取用"],
+  ja: ["端へドラッグ", "あとで使う", "どこへでも移動"],
+  de: ["Zum Rand ziehen", "Für später ablegen", "Überallhin mitnehmen"],
+  fr: ["Glissez vers le bord", "Gardez pour plus tard", "Déposez où vous voulez"],
+  ko: ["가장자리로 드래그", "나중을 위해 보관", "어디든 가져가기"],
+  it: ["Trascina sul bordo", "Conserva per dopo", "Portalo ovunque"],
+  nl: ["Sleep naar de rand", "Bewaar voor later", "Neem overal mee"],
+  ru: ["Перетащите к краю", "Оставьте на потом", "Перенесите куда угодно"]
+};
+
 const escape = value => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 const canonical = locale => `https://getborda.app/${locale.route ? `${locale.route}/` : ""}`;
 const navOptions = current => Object.values(locales).map(locale => `<option value="/${locale.route ? `${locale.route}/` : ""}"${locale === current ? " selected" : ""}>${locale.name}</option>`).join("");
@@ -118,16 +133,17 @@ const alternateLinks = Object.values(locales).map(locale => `<link rel="alternat
 function page(locale) {
   const guide = installGuides[locale.route || "en"];
   const directDescription = directDescriptions[locale.route || "en"];
+  const motion = motionLabels[locale.route || "en"];
   const jsonLd = JSON.stringify({ "@context": "https://schema.org", "@type": "SoftwareApplication", name: "Borda", applicationCategory: "UtilitiesApplication", operatingSystem: "macOS 15+", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" }, downloadUrl: "https://getborda.app/download/", softwareVersion: "0.9.0", description: locale.description });
   return `<!doctype html>
 <html lang="${locale.lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${escape(locale.title)}</title><meta name="description" content="${escape(locale.description)}"><link rel="canonical" href="${canonical(locale)}">
 ${alternateLinks}<link rel="alternate" hreflang="x-default" href="https://getborda.app/">
 <meta property="og:type" content="website"><meta property="og:title" content="${escape(locale.title)}"><meta property="og:description" content="${escape(locale.description)}"><meta property="og:image" content="https://getborda.app/assets/borda.png"><meta name="theme-color" content="#060b18">
-<link rel="icon" href="/assets/borda.png"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">${jsonLd}</script></head>
+<link rel="icon" href="/assets/borda.png"><link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/motion.css"><script type="application/ld+json">${jsonLd}</script></head>
 <body><header class="nav"><a class="brand" href="/"><img src="/assets/borda.png" alt=""><span>Borda</span></a><div class="nav-actions"><label class="language"><span class="sr-only">${escape(locale.language)}</span><select data-language>${navOptions(locale)}</select></label><a href="/github/">GitHub</a></div></header>
 <main><section class="hero"><div class="hero-copy"><p class="eyebrow">${escape(locale.eyebrow)}</p><h1>${escape(locale.headline)}</h1><p class="lede">${escape(locale.intro)}</p><div class="actions"><a class="button primary" href="/download/" data-download>${escape(locale.download)}</a><a class="button coffee" href="/cafe/">☕ ${escape(locale.coffee)}</a></div><div class="quiet-actions"><a href="#install">${escape(guide.label)} ↓</a><a href="/github/">${escape(locale.source)} ↗</a></div><p class="requirement"> ${escape(locale.requirement)}</p></div>
-<div class="product-scene" aria-label="Borda preview"><div class="screen"><div class="file-chip"><span>⌁</span> campaign-brief.pdf</div><div class="edge-shelf"><div class="shelf-head"><b>Borda</b><span>3</span></div><div class="shelf-row"><i>PDF</i><span>campaign-brief.pdf<small>PDF · 4.8 MB</small></span></div><div class="shelf-row"><i>IMG</i><span>moodboard.png<small>Image · 2.1 MB</small></span></div><div class="shelf-row"><i>TXT</i><span>Idea for later<small>Text · 84 B</small></span></div></div></div></div></section>
+<div class="product-scene" data-motion-demo aria-label="Borda preview"><div class="screen"><div class="edge-signal" aria-hidden="true"></div><div class="file-chip" aria-hidden="true"><span>⌁</span> campaign-brief.pdf</div><div class="demo-cursor" aria-hidden="true"><svg viewBox="0 0 28 34"><path d="M3 2 24 21l-10 1 5 9-5 2-5-9-7 7z"/></svg></div><div class="edge-shelf"><div class="shelf-head"><b>Borda</b><span>3</span></div><div class="shelf-row"><i>PDF</i><span>campaign-brief.pdf<small>PDF · 4.8 MB</small></span></div><div class="shelf-row"><i>IMG</i><span>moodboard.png<small>Image · 2.1 MB</small></span></div><div class="shelf-row"><i>TXT</i><span>Idea for later<small>Text · 84 B</small></span></div></div><div class="motion-captions" aria-hidden="true"><span>${escape(motion[0])}</span><span>${escape(motion[1])}</span><span>${escape(motion[2])}</span></div><button class="motion-replay" type="button" data-motion-replay aria-label="Replay animation">↻</button></div></div></section>
 <section class="workflow"><p class="eyebrow">Borda</p><h2>${escape(locale.how)}</h2><div class="steps"><article><span>01</span><h3>${escape(locale.step1)}</h3><p>${escape(locale.step1b)}</p></article><article><span>02</span><h3>${escape(locale.step2)}</h3><p>${escape(locale.step2b)}</p></article><article><span>03</span><h3>${escape(locale.step3)}</h3><p>${escape(locale.step3b)}</p></article></div></section>
 <section class="principles"><article><div class="glyph">⌂</div><h2>${escape(locale.local)}</h2><p>${escape(locale.localb)}</p></article><article><div class="glyph">∞</div><h2>${escape(locale.free)}</h2><p>${escape(locale.freeb)}</p><a href="/cafe/">${escape(locale.coffee)} ↗</a></article></section>
 <section class="installation" id="install"><p class="eyebrow">${escape(guide.label)}</p><h2>${escape(guide.title)}</h2><div class="install-steps"><article><span>1</span><div><h3>${escape(guide.one)}</h3><p>${escape(guide.oneb)}</p></div></article><article><span>2</span><div><h3>${escape(guide.two)}</h3><p>${escape(guide.twob)}</p></div></article><article><span>3</span><div><h3>${escape(guide.three)}</h3><p>${escape(guide.threeb)}</p></div></article></div></section>
