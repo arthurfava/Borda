@@ -1,0 +1,13 @@
+Move files, folders, images, links and text between apps without rearranging your windows.
+
+Drag something to the side of a display and Borda keeps it in a temporary glass shelf. When you need it, move the pointer back to that spot and drag the item into any other app.
+
+• Multiple independent shelves across displays
+• Several items in the same shelf
+• Files, folders, images, links, plain text and rich text
+• Quick Look, Share, ZIP, image resize and OCR
+• Optional clipboard history and watched folders
+• Launch at login and global shortcuts
+• Local storage with no account or cloud
+
+Borda is free. Optional coffees support its continued development but never unlock features.

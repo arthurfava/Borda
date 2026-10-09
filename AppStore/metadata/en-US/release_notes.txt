@@ -1,0 +1,1 @@
+Borda 1.0 introduces private edge shelves, multiple displays, local actions and eleven interface languages.

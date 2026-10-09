@@ -1,0 +1,13 @@
+Leve arquivos, pastas, imagens, links e textos entre aplicativos sem reorganizar suas janelas.
+
+Arraste algo para a lateral de um monitor e o Borda guarda em uma caixa temporária de vidro. Quando precisar, volte o ponteiro àquele ponto e arraste o item para qualquer outro aplicativo.
+
+• Várias caixas independentes em diferentes monitores
+• Vários itens na mesma caixa
+• Arquivos, pastas, imagens, links, texto simples e rico
+• Visualização Rápida, Compartilhar, ZIP, redimensionamento e OCR
+• Histórico opcional do clipboard e pastas observadas
+• Abertura ao iniciar e atalhos globais
+• Armazenamento local, sem conta ou nuvem
+
+O Borda é grátis. Cafés opcionais apoiam o desenvolvimento, mas nunca liberam recursos.

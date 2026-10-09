@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T22:45:00-04:00",
+  "title": "Design System: Borda",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Cor de ação do sistema",
+        "canonical": "NSColor.controlAccentColor"
+      },
+      "glass-tint-rest": {
+        "role": "neutral",
+        "displayName": "Vidro em repouso",
+        "canonical": "transparent"
+      }
+    },
+    "typographyMeta": {
+      "title": { "displayName": "Título da caixa", "purpose": "Identificar a superfície." },
+      "body": { "displayName": "Nome do item", "purpose": "Reconhecimento rápido do conteúdo." },
+      "label": { "displayName": "Metadado", "purpose": "Tipo, tamanho e contagem." }
+    },
+    "shadows": [
+      {
+        "name": "window-native",
+        "value": "NSPanel.hasShadow = true",
+        "purpose": "Separar a gaveta de vidro do conteúdo sob ela sem criar cartões internos."
+      }
+    ],
+    "motion": [
+      { "name": "expand", "value": "0.20s ease-out", "purpose": "A cápsula cresce para a caixa." },
+      { "name": "collapse", "value": "0.18s ease-out", "purpose": "A caixa retorna à borda." },
+      { "name": "reduce-motion", "value": "0s", "purpose": "Substitui ambas quando Reduzir Movimento está ativo." }
+    ]
+  },
+  "components": [],
+  "narrative": {
+    "northStar": "A gaveta na borda do vidro",
+    "overview": "Uma propriedade espacial discreta do macOS: cápsula em repouso, gaveta NSGlassEffectView regular sem tintura durante a interação e conteúdo sem cartões aninhados.",
+    "keyCharacteristics": [
+      "Liquid Glass nativo",
+      "endereço espacial persistente",
+      "lista limpa",
+      "movimento curto",
+      "cor apenas como feedback"
+    ],
+    "rules": [
+      { "name": "Azul transitório", "body": "A cor de destaque aparece apenas durante o drop ou como tintura mínima da cápsula.", "section": "colors" },
+      { "name": "Material funcional", "body": "O vidro delimita e responde; não é decoração gratuita.", "section": "elevation" }
+    ],
+    "dos": [
+      "Use semântica e preferências do sistema.",
+      "Mantenha uma aba visível por caixa com conteúdo."
+    ],
+    "donts": [
+      "Não mostre borda grande quando não há conteúdo.",
+      "Não empilhe cartões dentro do vidro.",
+      "Não crie cápsulas a menos de 74 pt umas das outras."
+    ]
+  }
+}

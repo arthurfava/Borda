@@ -1,0 +1,5 @@
+Sposta file, cartelle, immagini, link e testo tra le app senza riordinare le finestre. Trascina qualcosa sul bordo dello schermo e Borda lo conserva in un ripiano temporaneo di vetro.
+
+Più ripiani e display, Visualizzazione rapida, Condividi, ZIP, ridimensionamento, OCR, cronologia appunti opzionale, cartelle osservate e scorciatoie globali. Tutto resta sul Mac, senza account o cloud.
+
+Borda è gratuito. I caffè opzionali sostengono lo sviluppo e non sbloccano funzioni.

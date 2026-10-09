@@ -1,0 +1,5 @@
+Verschiebe Dateien, Ordner, Bilder, Links und Text zwischen Apps, ohne Fenster neu anzuordnen. Ziehe etwas an den Bildschirmrand und Borda bewahrt es in einer temporären Glasablage auf.
+
+Mehrere Ablagen und Displays, Übersicht, Teilen, ZIP, Bildskalierung, OCR, optionaler Zwischenablageverlauf, überwachte Ordner und globale Kurzbefehle. Alles bleibt lokal auf deinem Mac – ohne Konto oder Cloud.
+
+Borda ist kostenlos. Optionale Kaffees unterstützen die Entwicklung und schalten keine Funktionen frei.

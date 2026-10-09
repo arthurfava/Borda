@@ -1,0 +1,7 @@
+Mueve archivos, carpetas, imágenes, enlaces y texto entre apps sin reorganizar ventanas.
+
+Arrastra algo al lateral de una pantalla y Borda lo guarda en una estantería temporal de cristal. Vuelve a ese punto y arrastra el elemento a cualquier otra app.
+
+Incluye varias estanterías, varios monitores, Vista rápida, Compartir, ZIP, cambio de tamaño, OCR, historial opcional del portapapeles, carpetas vigiladas y atajos globales. Todo se almacena localmente, sin cuenta ni nube.
+
+Borda es gratis. Los cafés opcionales apoyan el desarrollo y nunca desbloquean funciones.

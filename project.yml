@@ -1,0 +1,74 @@
+name: Borda
+options:
+  bundleIdPrefix: com.arthurfava
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+configs:
+  Debug: debug
+  Release-Direct: release
+  Release-AppStore: release
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    ARCHS: "arm64 x86_64"
+    ONLY_ACTIVE_ARCH: NO
+targets:
+  BordaCore:
+    type: framework
+    platform: macOS
+    sources:
+      - Sources/BordaCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.arthurfava.BordaCore
+        GENERATE_INFOPLIST_FILE: YES
+        DEFINES_MODULE: YES
+        SKIP_INSTALL: YES
+  Borda:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/Borda
+    resources:
+      - path: Resources/AppIcon.icns
+      - path: Resources/Localization
+      - path: Resources/PrivacyInfo.xcprivacy
+    dependencies:
+      - target: BordaCore
+    info:
+      path: Resources/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.arthurfava.Borda
+        PRODUCT_NAME: Borda
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: YES
+      configs:
+        Debug:
+          CODE_SIGN_ENTITLEMENTS: Config/Borda-Direct.entitlements
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG DIRECT
+        Release-Direct:
+          CODE_SIGN_ENTITLEMENTS: Config/Borda-Direct.entitlements
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: DIRECT
+        Release-AppStore:
+          CODE_SIGN_ENTITLEMENTS: Config/Borda-AppStore.entitlements
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: APP_STORE
+schemes:
+  Borda-Direct:
+    build:
+      targets:
+        Borda: all
+    run:
+      config: Debug
+    archive:
+      config: Release-Direct
+  Borda-AppStore:
+    build:
+      targets:
+        Borda: all
+    run:
+      config: Debug
+    archive:
+      config: Release-AppStore

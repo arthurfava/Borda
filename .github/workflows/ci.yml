@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  core-and-website:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Core checks
+        run: swift run BordaCoreCheck
+      - name: Build direct executable
+        run: swift build -c release --product Borda
+      - name: Validate app localizations
+        run: |
+          node scripts/generate-app-localizations.mjs
+          plutil -lint Resources/Localization/*.lproj/Localizable.strings
+          test "$(find Resources/Localization -name Localizable.strings | wc -l | tr -d ' ')" = "11"
+      - name: Build website
+        working-directory: website
+        run: npm run build
+      - name: Check website
+        working-directory: website
+        run: npm run check
+      - name: Validate plists
+        run: |
+          plutil -lint Resources/Info.plist Resources/PrivacyInfo.xcprivacy Config/*.plist Config/*.entitlements
+
+  xcode-archives:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: ./scripts/generate-xcode-project.sh
+      - name: Build Direct scheme without signing
+        run: xcodebuild -project Borda.xcodeproj -scheme Borda-Direct -configuration Release-Direct CODE_SIGNING_ALLOWED=NO build
+      - name: Build App Store scheme without signing
+        run: xcodebuild -project Borda.xcodeproj -scheme Borda-AppStore -configuration Release-AppStore CODE_SIGNING_ALLOWED=NO build

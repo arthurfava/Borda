@@ -1,0 +1,1 @@
+Borda 1.0 bringt private Randablagen, lokale Aktionen und elf Sprachen.

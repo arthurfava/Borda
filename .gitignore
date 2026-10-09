@@ -1,0 +1,13 @@
+.build/
+.DS_Store
+*.xcuserstate
+DerivedData/
+build/
+dist/
+*.xcarchive
+*.ipa
+.env
+.env.*
+website/dist/
+website/.vercel/
+xcuserdata/

@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		052E384171204583BFA25142 /* ShelfItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A39919923177297D912C36 /* ShelfItemView.swift */; };
+		0C38409B428B85B9D0AE1549 /* ShelfContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E00689706FD1D5B59C466A4 /* ShelfContentView.swift */; };
+		1CA968970C28E4243FD486D7 /* BordaPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD68D25BD5840AF843B2D790 /* BordaPreferences.swift */; };
+		22641259C6A1132036B9BA94 /* CoreL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E5B2600B0F78EFC4BD23D7 /* CoreL10n.swift */; };
+		3EC87BEF0A5D230DB76D188B /* ShelfPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951339A4BDBFB694BCF158FD /* ShelfPanelController.swift */; };
+		4667C491DE38D207E20489D1 /* GlobalHotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D571573DEC3FF9C68803D /* GlobalHotKeyManager.swift */; };
+		4B4AD22FCE70C79294AD7970 /* BordaMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D358C1C536E9DA1CBD34FBB /* BordaMain.swift */; };
+		52B4664BF4620D7877EFD1B7 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510E4BD6EBC9AAC93A66FC50 /* L10n.swift */; };
+		586F57931AFFD8CAD3D2EAC5 /* DistributionChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD39755B533DBFB00C220F0 /* DistributionChannel.swift */; };
+		66A2EE3502DB710E6A507C77 /* EdgeTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61957ACCF52FDCF770D92217 /* EdgeTriggerView.swift */; };
+		7CA6B4DF27341157A1B4C8AD /* ShelfActionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69206ECC01C1CEE0C4CEF1ED /* ShelfActionService.swift */; };
+		8D13F5EABB3C94BEADDAA64A /* LoginItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8946A82E2D9FD3129CD0DEB5 /* LoginItemManager.swift */; };
+		9795A162B064F46CA592A5B4 /* SupportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FB6453B97FB1E22DEA5F56 /* SupportService.swift */; };
+		9AB558EF917B6FFB1F001F9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A82A95DE7957C2416E8A4C /* AppDelegate.swift */; };
+		ADB958642A3476E3C3AB9FAD /* ShelfItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCEE5980BA85E9571571788 /* ShelfItem.swift */; };
+		B6EBAA8FB7D886617883ABE7 /* BordaStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919FE8510F72803C2CD51CA5 /* BordaStorage.swift */; };
+		BFBCDF3995B69FA7582D695F /* QuickLookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C85E0B40D42958E435B888E /* QuickLookPresenter.swift */; };
+		C199F830113C3BB827E1448F /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084EBCD2CDCAF1D1258725BF /* PreferencesWindowController.swift */; };
+		CD7EE0827E1CD1CB670E502C /* BordaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8216DE491C0B8CC659686BFB /* BordaCore.framework */; };
+		DF3F35DDEA21142E25A9AE7E /* ShelfGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA41F971D50DDF71FEF5210 /* ShelfGroup.swift */; };
+		E1B7D27EF1A1FA9EA38A7CA3 /* ShelfStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952D0723976FDF9DC48CA69 /* ShelfStore.swift */; };
+		EB23D9E973E72F1A35F2B6C5 /* BordaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8216DE491C0B8CC659686BFB /* BordaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F19D5212E482DF583844E581 /* ShelfInteractionGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9FCD3BCA6751AFAF730CA4 /* ShelfInteractionGeometry.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54EBD1304CD95FAA7A78F7FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B80144EDB6E39DC9134D806 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ED0434310DB51A31179B502;
+			remoteInfo = BordaCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3E0392156408CDC783EC9A77 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EB23D9E973E72F1A35F2B6C5 /* BordaCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		084EBCD2CDCAF1D1258725BF /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		0952D0723976FDF9DC48CA69 /* ShelfStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfStore.swift; sourceTree = "<group>"; };
+		21E5B2600B0F78EFC4BD23D7 /* CoreL10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreL10n.swift; sourceTree = "<group>"; };
+		3C85E0B40D42958E435B888E /* QuickLookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookPresenter.swift; sourceTree = "<group>"; };
+		3FA41F971D50DDF71FEF5210 /* ShelfGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfGroup.swift; sourceTree = "<group>"; };
+		48FB6453B97FB1E22DEA5F56 /* SupportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportService.swift; sourceTree = "<group>"; };
+		4996E1903611CDB28F8CC043 /* Borda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Borda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		510E4BD6EBC9AAC93A66FC50 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		61957ACCF52FDCF770D92217 /* EdgeTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeTriggerView.swift; sourceTree = "<group>"; };
+		69206ECC01C1CEE0C4CEF1ED /* ShelfActionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfActionService.swift; sourceTree = "<group>"; };
+		7E00689706FD1D5B59C466A4 /* ShelfContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfContentView.swift; sourceTree = "<group>"; };
+		8216DE491C0B8CC659686BFB /* BordaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BordaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8946A82E2D9FD3129CD0DEB5 /* LoginItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginItemManager.swift; sourceTree = "<group>"; };
+		89A82A95DE7957C2416E8A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		919FE8510F72803C2CD51CA5 /* BordaStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordaStorage.swift; sourceTree = "<group>"; };
+		951339A4BDBFB694BCF158FD /* ShelfPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfPanelController.swift; sourceTree = "<group>"; };
+		9D358C1C536E9DA1CBD34FBB /* BordaMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordaMain.swift; sourceTree = "<group>"; };
+		AD68D25BD5840AF843B2D790 /* BordaPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordaPreferences.swift; sourceTree = "<group>"; };
+		AD9FCD3BCA6751AFAF730CA4 /* ShelfInteractionGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfInteractionGeometry.swift; sourceTree = "<group>"; };
+		B6A39919923177297D912C36 /* ShelfItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfItemView.swift; sourceTree = "<group>"; };
+		BDCEE5980BA85E9571571788 /* ShelfItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfItem.swift; sourceTree = "<group>"; };
+		C16D571573DEC3FF9C68803D /* GlobalHotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKeyManager.swift; sourceTree = "<group>"; };
+		EDD39755B533DBFB00C220F0 /* DistributionChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistributionChannel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2CC5773F90E2C517CAD0615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD7EE0827E1CD1CB670E502C /* BordaCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E9D7661D3FD89764A9CBD35 = {
+			isa = PBXGroup;
+			children = (
+				59165166690C62EADB24C6CC /* Sources */,
+				434D416B9B7DD9AEF551F32C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		434D416B9B7DD9AEF551F32C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4996E1903611CDB28F8CC043 /* Borda.app */,
+				8216DE491C0B8CC659686BFB /* BordaCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EEDA56A1C6476D661F11764 /* BordaCore */ = {
+			isa = PBXGroup;
+			children = (
+				AD68D25BD5840AF843B2D790 /* BordaPreferences.swift */,
+				919FE8510F72803C2CD51CA5 /* BordaStorage.swift */,
+				21E5B2600B0F78EFC4BD23D7 /* CoreL10n.swift */,
+				69206ECC01C1CEE0C4CEF1ED /* ShelfActionService.swift */,
+				3FA41F971D50DDF71FEF5210 /* ShelfGroup.swift */,
+				AD9FCD3BCA6751AFAF730CA4 /* ShelfInteractionGeometry.swift */,
+				BDCEE5980BA85E9571571788 /* ShelfItem.swift */,
+				0952D0723976FDF9DC48CA69 /* ShelfStore.swift */,
+			);
+			path = BordaCore;
+			sourceTree = "<group>";
+		};
+		59165166690C62EADB24C6CC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7CD2AD095E4607AF529CD842 /* Borda */,
+				4EEDA56A1C6476D661F11764 /* BordaCore */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7CD2AD095E4607AF529CD842 /* Borda */ = {
+			isa = PBXGroup;
+			children = (
+				89A82A95DE7957C2416E8A4C /* AppDelegate.swift */,
+				9D358C1C536E9DA1CBD34FBB /* BordaMain.swift */,
+				EDD39755B533DBFB00C220F0 /* DistributionChannel.swift */,
+				61957ACCF52FDCF770D92217 /* EdgeTriggerView.swift */,
+				C16D571573DEC3FF9C68803D /* GlobalHotKeyManager.swift */,
+				510E4BD6EBC9AAC93A66FC50 /* L10n.swift */,
+				8946A82E2D9FD3129CD0DEB5 /* LoginItemManager.swift */,
+				084EBCD2CDCAF1D1258725BF /* PreferencesWindowController.swift */,
+				3C85E0B40D42958E435B888E /* QuickLookPresenter.swift */,
+				7E00689706FD1D5B59C466A4 /* ShelfContentView.swift */,
+				B6A39919923177297D912C36 /* ShelfItemView.swift */,
+				951339A4BDBFB694BCF158FD /* ShelfPanelController.swift */,
+				48FB6453B97FB1E22DEA5F56 /* SupportService.swift */,
+			);
+			path = Borda;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38DBB7F46F72A6A3A5578BE3 /* Borda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93909BA3E35FC2003CAC282F /* Build configuration list for PBXNativeTarget "Borda" */;
+			buildPhases = (
+				94E6C6FCB9E2E8F1DD174A06 /* Sources */,
+				E2CC5773F90E2C517CAD0615 /* Frameworks */,
+				3E0392156408CDC783EC9A77 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D16948A9CE2FE737DB1C7D5 /* PBXTargetDependency */,
+			);
+			name = Borda;
+			packageProductDependencies = (
+			);
+			productName = Borda;
+			productReference = 4996E1903611CDB28F8CC043 /* Borda.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9ED0434310DB51A31179B502 /* BordaCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3DC36A95580912768A6778F /* Build configuration list for PBXNativeTarget "BordaCore" */;
+			buildPhases = (
+				D24C28A6865808115032159E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BordaCore;
+			packageProductDependencies = (
+			);
+			productName = BordaCore;
+			productReference = 8216DE491C0B8CC659686BFB /* BordaCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B80144EDB6E39DC9134D806 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					38DBB7F46F72A6A3A5578BE3 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 44D2E2676D6590FEFDE311C4 /* Build configuration list for PBXProject "Borda" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3E9D7661D3FD89764A9CBD35;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 434D416B9B7DD9AEF551F32C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9ED0434310DB51A31179B502 /* BordaCore */,
+				38DBB7F46F72A6A3A5578BE3 /* Borda */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94E6C6FCB9E2E8F1DD174A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB558EF917B6FFB1F001F9E /* AppDelegate.swift in Sources */,
+				4B4AD22FCE70C79294AD7970 /* BordaMain.swift in Sources */,
+				586F57931AFFD8CAD3D2EAC5 /* DistributionChannel.swift in Sources */,
+				66A2EE3502DB710E6A507C77 /* EdgeTriggerView.swift in Sources */,
+				4667C491DE38D207E20489D1 /* GlobalHotKeyManager.swift in Sources */,
+				52B4664BF4620D7877EFD1B7 /* L10n.swift in Sources */,
+				8D13F5EABB3C94BEADDAA64A /* LoginItemManager.swift in Sources */,
+				C199F830113C3BB827E1448F /* PreferencesWindowController.swift in Sources */,
+				BFBCDF3995B69FA7582D695F /* QuickLookPresenter.swift in Sources */,
+				0C38409B428B85B9D0AE1549 /* ShelfContentView.swift in Sources */,
+				052E384171204583BFA25142 /* ShelfItemView.swift in Sources */,
+				3EC87BEF0A5D230DB76D188B /* ShelfPanelController.swift in Sources */,
+				9795A162B064F46CA592A5B4 /* SupportService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D24C28A6865808115032159E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA968970C28E4243FD486D7 /* BordaPreferences.swift in Sources */,
+				B6EBAA8FB7D886617883ABE7 /* BordaStorage.swift in Sources */,
+				22641259C6A1132036B9BA94 /* CoreL10n.swift in Sources */,
+				7CA6B4DF27341157A1B4C8AD /* ShelfActionService.swift in Sources */,
+				DF3F35DDEA21142E25A9AE7E /* ShelfGroup.swift in Sources */,
+				F19D5212E482DF583844E581 /* ShelfInteractionGeometry.swift in Sources */,
+				ADB958642A3476E3C3AB9FAD /* ShelfItem.swift in Sources */,
+				E1B7D27EF1A1FA9EA38A7CA3 /* ShelfStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D16948A9CE2FE737DB1C7D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9ED0434310DB51A31179B502 /* BordaCore */;
+			targetProxy = 54EBD1304CD95FAA7A78F7FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AE7EFE6AE2C3DDA77224C62 /* Release-AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.BordaCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = "Release-AppStore";
+		};
+		1BF2CF9146AE8D04682A17F7 /* Release-Direct */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Config/Borda-Direct.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.Borda;
+				PRODUCT_NAME = Borda;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DIRECT;
+			};
+			name = "Release-Direct";
+		};
+		63EC621D99708A8A9A84D2FD /* Release-Direct */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.BordaCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = "Release-Direct";
+		};
+		8041FF5E2C15237D2FEA3727 /* Release-Direct */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Release-Direct";
+		};
+		80FD24F5DA175D879065024A /* Release-AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Config/Borda-AppStore.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.Borda;
+				PRODUCT_NAME = Borda;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = APP_STORE;
+			};
+			name = "Release-AppStore";
+		};
+		B394840988446F71F114A5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.BordaCore;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C50532806915C2F21A474FDA /* Release-AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Release-AppStore";
+		};
+		D414302C38BE5BAAD5F109FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Config/Borda-Direct.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.arthurfava.Borda;
+				PRODUCT_NAME = Borda;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DIRECT";
+			};
+			name = Debug;
+		};
+		DA87C5CF15CFB3E902B162BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "arm64 x86_64";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44D2E2676D6590FEFDE311C4 /* Build configuration list for PBXProject "Borda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA87C5CF15CFB3E902B162BB /* Debug */,
+				C50532806915C2F21A474FDA /* Release-AppStore */,
+				8041FF5E2C15237D2FEA3727 /* Release-Direct */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		93909BA3E35FC2003CAC282F /* Build configuration list for PBXNativeTarget "Borda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D414302C38BE5BAAD5F109FB /* Debug */,
+				80FD24F5DA175D879065024A /* Release-AppStore */,
+				1BF2CF9146AE8D04682A17F7 /* Release-Direct */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B3DC36A95580912768A6778F /* Build configuration list for PBXNativeTarget "BordaCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B394840988446F71F114A5FF /* Debug */,
+				1AE7EFE6AE2C3DDA77224C62 /* Release-AppStore */,
+				63EC621D99708A8A9A84D2FD /* Release-Direct */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B80144EDB6E39DC9134D806 /* Project object */;
+}
