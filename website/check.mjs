@@ -10,7 +10,7 @@ for (const marker of ["hreflang", "SoftwareApplication", "/download/", "/cafe/",
 }
 if (home.includes("Mac App Store")) throw new Error("The direct-download landing still mentions the Mac App Store.");
 const release = JSON.parse(readFileSync(join("dist", "releases/latest.json"), "utf8"));
-if (release.version !== "0.9.0" || typeof release.available !== "boolean") {
+if (release.version !== "0.9.0" || typeof release.available !== "boolean" || !["stable", "beta"].includes(release.channel)) {
   throw new Error("Invalid release manifest.");
 }
 console.log(`Website check passed: ${required.length} required files.`);

@@ -16,6 +16,10 @@ function publicHTTPSURL(name) {
 const downloadURL = publicHTTPSURL("BORDA_DOWNLOAD_URL");
 const coffeeURL = publicHTTPSURL("BORDA_COFFEE_URL");
 const githubURL = publicHTTPSURL("BORDA_GITHUB_URL");
+const downloadChannel = process.env.BORDA_DOWNLOAD_CHANNEL?.trim() || "stable";
+if (!["stable", "beta"].includes(downloadChannel)) {
+  throw new Error("BORDA_DOWNLOAD_CHANNEL must be stable or beta.");
+}
 rmSync(output, { recursive: true, force: true });
 mkdirSync(join(output, "assets"), { recursive: true });
 cpSync(join(here, "assets", "site.css"), join(output, "assets", "site.css"));
@@ -166,7 +170,9 @@ const support = `<!doctype html><html lang="en"><head><meta charset="utf-8"><met
 mkdirSync(join(output, "support"), { recursive: true }); writeFileSync(join(output, "support", "index.html"), support);
 
 const download = downloadURL
-  ? `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=${downloadURL}"><title>Downloading Borda…</title><link rel="stylesheet" href="/assets/site.css"></head><body><main class="legal"><img class="download-icon" src="/assets/borda.png" alt="Borda"><h1>Your download is starting.</h1><p>If it does not begin, <a href="${downloadURL}">download Borda directly</a>.</p><p>Borda is free. If it earns a place in your workflow, <a href="/cafe/">you can buy Arthur a coffee</a>.</p></main></body></html>`
+  ? downloadChannel === "beta"
+    ? `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Borda public beta</title><link rel="stylesheet" href="/assets/site.css"></head><body><main class="legal"><img class="download-icon" src="/assets/borda.png" alt="Borda"><p class="eyebrow">Public beta · 0.9.0</p><h1>Try Borda before the signed release.</h1><p>This beta is not yet signed with an Apple Developer ID or notarized. macOS may block it or require an explicit security exception. If you prefer a frictionless installation, wait for the signed release.</p><p><a class="button primary" href="${downloadURL}">Download the unnotarized beta</a></p><p>SHA-256: <code>b03fa934f745a28008fd5fca43e0e20e6c35ddf79704ab9353317bff33e1d4ed</code></p><p><a href="/github/">View release notes on GitHub</a>.</p></main></body></html>`
+    : `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=${downloadURL}"><title>Downloading Borda…</title><link rel="stylesheet" href="/assets/site.css"></head><body><main class="legal"><img class="download-icon" src="/assets/borda.png" alt="Borda"><h1>Your download is starting.</h1><p>If it does not begin, <a href="${downloadURL}">download Borda directly</a>.</p><p>Borda is free. If it earns a place in your workflow, <a href="/cafe/">you can buy Arthur a coffee</a>.</p></main></body></html>`
   : `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Borda download</title><link rel="stylesheet" href="/assets/site.css"></head><body><main class="legal"><img class="download-icon" src="/assets/borda.png" alt="Borda"><p class="eyebrow">Public beta</p><h1>The signed download is almost ready.</h1><p>The site is live, but the DMG will only be published after Apple Developer signing and notarization are complete. This protects you from installing an unverified build.</p><p>Follow <a href="/github/">Borda on GitHub</a> for the release.</p></main></body></html>`;
 mkdirSync(join(output, "download"), { recursive: true }); writeFileSync(join(output, "download", "index.html"), download);
 
@@ -181,4 +187,4 @@ writeFileSync(join(output, "github", "index.html"), redirectPage("Borda on GitHu
 writeFileSync(join(output, "robots.txt"), "User-agent: *\nAllow: /\nSitemap: https://getborda.app/sitemap.xml\n");
 writeFileSync(join(output, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${Object.values(locales).map(locale => `<url><loc>${canonical(locale)}</loc></url>`).join("")}<url><loc>https://getborda.app/privacy/</loc></url><url><loc>https://getborda.app/support/</loc></url><url><loc>https://getborda.app/download/</loc></url></urlset>`);
 mkdirSync(join(output, "releases"), { recursive: true });
-writeFileSync(join(output, "releases", "latest.json"), JSON.stringify({ version: "0.9.0", build: 90, available: Boolean(downloadURL), url: downloadURL || null }, null, 2));
+writeFileSync(join(output, "releases", "latest.json"), JSON.stringify({ version: "0.9.0", build: 90, channel: downloadChannel, notarized: downloadChannel === "stable" && Boolean(downloadURL), available: Boolean(downloadURL), url: downloadURL || null }, null, 2));
