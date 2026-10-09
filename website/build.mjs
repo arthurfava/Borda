@@ -9,7 +9,7 @@ rmSync(output, { recursive: true, force: true });
 mkdirSync(join(output, "assets"), { recursive: true });
 cpSync(join(here, "assets", "site.css"), join(output, "assets", "site.css"));
 cpSync(join(here, "assets", "site.js"), join(output, "assets", "site.js"));
-cpSync(join(here, "..", "Resources", "Borda-Logo-1024.png"), join(output, "assets", "borda.png"));
+cpSync(join(here, "assets", "borda.png"), join(output, "assets", "borda.png"));
 
 const locales = {
   en: {
