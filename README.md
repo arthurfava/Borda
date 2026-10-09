@@ -33,7 +33,7 @@ Protótipo nativo para macOS de uma prateleira temporária acionada pela borda d
 - DMG com janela compacta, fundo próprio, instrução de instalação e atalho visual para Aplicativos.
 - Ícone refinado com “B” tridimensional de vidro soprado, inteiramente orgânico, sem trechos retos ou faces retangulares.
 - Interface e landing disponíveis em inglês, português do Brasil, espanhol, chinês simplificado, japonês, alemão, francês, coreano, italiano, holandês e russo.
-- Dois canais de distribuição: Mac App Store com StoreKit e DMG direto com apoio opcional pelo Buy Me a Coffee.
+- Distribuição direta por DMG, com apoio opcional pelo Buy Me a Coffee.
 - Privacy Manifest, App Sandbox, bookmarks de segurança e configurações separadas de assinatura.
 
 ## Site e apoio
@@ -41,7 +41,7 @@ Protótipo nativo para macOS de uma prateleira temporária acionada pela borda d
 - Site oficial planejado: `https://getborda.app`.
 - Código e releases: `https://github.com/arthurfava/Borda`.
 - O Borda é gratuito e não bloqueia recursos. Apoio é sempre voluntário.
-- A versão da App Store usa cafés consumíveis do StoreKit; a versão direta abre `getborda.app/cafe`.
+- O app e a landing abrem `getborda.app/cafe` para apoio voluntário, sem bloquear qualquer recurso.
 
 ## Desenvolvimento
 
